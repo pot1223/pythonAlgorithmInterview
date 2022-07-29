@@ -43,4 +43,27 @@ def Palindrome(input: str):
   return input == input[::-1] # 슬라이싱은 무지 빠르게 연산되므로 슬라이싱을 사용한 알고리즘이 속도 개선에 유리하다 
 
 
+# 위치 포인터를 이용한 풀이 
+
+
+def positionPalindrom(input: str):
+  length = len(input)
+  leftindex = 0 
+  rightindex = 1
+  for i in range(length):
+    while input[i+leftindex].isalnum() == False:
+      leftindex +=1 
+      if leftindex == length:
+        return True
+    while input[length-i-rightindex].isalnum() == False:
+      rightindex +=1
+    if i+leftindex >= length-i-rightindex:
+      break
+    if input[i+leftindex].lower() != input[length-i-rightindex].lower():
+      return False
+  return True
+
+
+
+
 
