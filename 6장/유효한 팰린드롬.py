@@ -40,7 +40,7 @@ import re
 def Palindrome(input: str):
   input=input.lower()
   input = re.sub('[^a-z0-9]','',input) # a부터 z까지 문자, 0부터 9까지 숫자를 제외한 모든 기호는 삭제된다 
-  return input == input[::-1]
+  return input == input[::-1] # 슬라이싱은 무지 빠르게 연산되므로 슬라이싱을 사용한 알고리즘이 속도 개선에 유리하다 
 
 
 
