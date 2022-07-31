@@ -3,7 +3,6 @@ import re
 def resort(s:list):
   resortlst1 = []
   resortlst2 = []
-  resortlst3 = []
   for i in range(len(s)):
     if list(s[i][-1]) == re.findall('[a-zA-Z]',s[i][-1]):
       resortlst1.append(s[i])
