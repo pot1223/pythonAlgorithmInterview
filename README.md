@@ -1,1 +1,1 @@
-# <p> 1일 1 알고리즘 프로젝트1 </p>
+# <p> Algorithm project1 </p>
