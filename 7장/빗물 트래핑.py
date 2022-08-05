@@ -1,22 +1,23 @@
 # 투 포인터 사용 풀이 
 
 lst = [0,1,0,2,1,0,1,3,2,1,2,1]
-def rainwaterTrapping(s:list):
-  if not s:
-    return 0
-  volume = 0
-  left, right = 0 , len(s)-1
-  left_max, right_max = s[left],s[right]
-  while left<right:
-    left_max, right_max =max(left_max,s[left]),max(right_max, s[right])
+def rainwatertrapping(s:lst):
+  volume = 0 
+  left = 0
+  right = (len(s)-1)
+  left_max = s[left]
+  right_max = s[right]
+  while left < right:
+    left_max, right_max = max(left_max,s[left]), max(right_max, s[right])
     if left_max <= right_max:
-      volume += left_max -s[left]
-      left +=1 
+      volume += left_max - s[left] 
+      left +=1
     else:
       volume += right_max - s[right]
       right -=1
   return volume
-rainwaterTrapping(lst)
+
+rainwatertrapping(lst)
 
 # 스택 사용 풀이 
 
