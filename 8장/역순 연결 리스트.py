@@ -3,12 +3,12 @@ class ListNode:
     self.val = val
     self.next = next 
 
-def reverseNode(head:ListNode):
-  node, prev = head, None
-  while node:
-    next, node.next = node.next, prev
-    prev, node = node, next 
-  return prev 
-
-
+def reverseNode(node:ListNode):
+  start = node
+  reverse = None
+  next, start.next = start.next, reverse
+  reverse , start = start, next   
+  return reverse 
+      
 node = ListNode(1,ListNode(2,ListNode(3,ListNode(4,ListNode(5)))))
+reverseNode(node)
