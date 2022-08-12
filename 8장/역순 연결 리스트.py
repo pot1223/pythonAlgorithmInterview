@@ -6,9 +6,10 @@ class ListNode:
 def reverseNode(node:ListNode):
   start = node
   reverse = None
-  next, start.next = start.next, reverse
-  reverse , start = start, next   
+  while start:
+    next, start.next = start.next, reverse
+    reverse , start = start, next   
   return reverse 
       
 node = ListNode(1,ListNode(2,ListNode(3,ListNode(4,ListNode(5)))))
-reverseNode(node)
+reverseNode(node).val
