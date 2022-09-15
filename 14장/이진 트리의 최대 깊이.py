@@ -23,3 +23,4 @@ def maxDepth(root : TreeNode) :
 
 tree = TreeNode(val =  3 , left = TreeNode(val = 9) , right = TreeNode(val = 20 , left = TreeNode(val = 15) , right = TreeNode(val =7)))
 maxDepth(tree)
+# 굿 
